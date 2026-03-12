@@ -36,6 +36,7 @@ function handleInput(e) {
           :value="countState.bill"
           placeholder="0,00"
           type="text"
+          inputmode="numeric"
           @input="handleInput"
         />
 
