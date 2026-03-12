@@ -63,9 +63,10 @@ function handleInput(e) {
 }
 
 .input-text {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   color: #0b30aa;
+  margin: 0;
 }
 
 .input-wrapper {
@@ -78,14 +79,19 @@ function handleInput(e) {
 
 .btn-minus,
 .btn-plus {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
   color: white;
-  transform: translateY(-4px);
+
   background: linear-gradient(145deg,#1d4cff,#0b30aa);
   border: none;
-  padding: 10px 16px;
+
+  padding: 8px 12px;
+
   cursor: pointer;
+
+  transform: translateY(-4px);
+
   box-shadow:
     0 6px 0 #061b63,
     0 10px 20px rgba(0,0,0,0.3);
@@ -93,7 +99,8 @@ function handleInput(e) {
   transition: all 0.15s ease;
 }
 
-.btn-minus:hover, .btn-plus:hover {
+.btn-minus:hover,
+.btn-plus:hover {
   background: linear-gradient(145deg, #2b5cff, #1239c0);
   transform: translateY(-5px);
   box-shadow:
@@ -101,7 +108,8 @@ function handleInput(e) {
     0 12px 25px rgba(0,0,0,0.35);
 }
 
-.btn-minus:active, .btn-plus:active {
+.btn-minus:active,
+.btn-plus:active {
   transform: translateY(5px);
   box-shadow:
     0 2px 0 #061b63,
@@ -109,50 +117,61 @@ function handleInput(e) {
 }
 
 .input-tip {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
+
   border: none;
-  padding: 10px;
+
+  padding: 8px 12px;
   width: 100%;
+
   text-align: center;
+
   color: #0b30aa;
   background: #f8f9ff;
+
   transform: translateY(-2px);
- box-shadow:
+
+  box-shadow:
     0 6px 0 #061b63,
     0 12px 25px rgba(0,0,0,0.3);
 
   transition: all 0.15s ease;
 }
-  
+
 .input-tip:focus {
   transform: translateY(-4px);
   box-shadow:
     0 8px 0 #061b63,
     0 12px 25px rgba(0,0,0,0.3);
-}
-
-.input-tip:focus {
   outline: none;
 }
 
-@media (max-width: 600px) {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+@media (min-width: 600px) {
 
   .input-text {
-    font-size: 18px;
-    margin: 0;
+    font-size: 24px;
   }
 
   .btn-minus,
   .btn-plus {
-    font-size: 20px;
-    padding: 8px 12px;
+    font-size: 26px;
+    padding: 10px 16px;
   }
 
   .input-tip {
-    font-size: 20px;
-    padding: 8px 12px;
-    margin: 0;
+    font-size: 26px;
+    padding: 10px;
   }
 
 }

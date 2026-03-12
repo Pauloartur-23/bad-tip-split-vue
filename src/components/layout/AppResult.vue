@@ -27,17 +27,17 @@ function format(value) {
 
     <div class="result-card">
       <span class="label">Total:</span>
-      <span class="value">R$ {{ format(state.total) }}</span>
+      <span class="value">R$ {{ format(state.total).replace(".", ",") }}</span>
     </div>
 
     <div class="result-card">
       <span class="label">Gorjeta:</span>
-      <span class="value">R$ {{ format(state.tipValue) }}</span>
+      <span class="value">R$ {{ format(state.tipValue).replace(".", ",") }}</span>
     </div>
 
     <div class="result-card highlight">
       <span class="label">Por Pessoa:</span>
-      <span class="value">R$ {{ format(state.perPerson) }}</span>
+      <span class="value">R$ {{ format(state.perPerson).replace(".", ",") }}</span>
     </div>
 
     <button class="reset-btn" @click="reset">
@@ -50,27 +50,29 @@ function format(value) {
 <style scoped>
 
 .page {
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-  margin-top: 140px;
+  width: 90%;
+  margin: 0 auto;
 
-  padding: 30px;
+  padding: 20px 0 0 0;
 
   background: white;
-  border-radius: 12px;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-top:#0b30aa 2px solid;
+  border-radius: 0;
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+
+  box-shadow: none;
+  max-width: none;
 }
 
 .title {
   margin: 0;
   color: #0b30aa;
-  font-size: 28px;
+  font-size: 26px;
+  text-align: center;
 }
 
 .result-card {
@@ -139,26 +141,27 @@ function format(value) {
     0 5px 10px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
 
   .page {
-    width: 90%;
-    margin: 0 auto; 
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 140px;
 
-    padding: 20px 0 0 0; 
+    padding: 30px;
 
-    box-shadow: none;
-    border-top:#0b30aa 2px solid;
-    border-radius: 0;
+    border-radius: 12px;
+    border-top: none;
 
-    gap: 10px;
-    max-width: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+    gap: 20px;
   }
 
-
   .title {
-    font-size: 26px;
-    text-align: center;
+    font-size: 28px;
+    text-align: left;
   }
 
 }

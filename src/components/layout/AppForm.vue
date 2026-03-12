@@ -29,17 +29,17 @@ const { calculate } = useCalculator()
 <style scoped>
 
 .inputPage {
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-  margin-top: 140px;
+  width: 90%;
+  padding: 0px;
 
-  padding: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 
   background: white;
-  border-radius: 12px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: none;
+  border-radius: 0;
+  max-width: none;
 
   display: flex;
   flex-direction: column;
@@ -47,28 +47,32 @@ const { calculate } = useCalculator()
 
 .input-container {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 0px;
 }
 
 .input-container > * {
   flex: 1;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
 
   .inputPage {
-    width: 90%;
-    padding: 0px;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    box-shadow: none;
-    border-radius: 0;
-    max-width: none;
+    width: 100%;
+    max-width: 700px;
+
+    margin: auto;
+    margin-top: 140px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
 
   .input-container {
-    flex-direction: column;
-    gap: 0px;
+    flex-direction: row;
+    gap: 20px;
   }
 
 }

@@ -21,27 +21,30 @@ import AppHeader from './components/layout/AppHeader.vue'
 
 .app-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
 
-  padding: 160px 40px 40px 40px;
-
-  min-height: 100vh;
-  max-width: 1200px;
-  margin: auto;
+  padding: 100px 0px 0px 0px;
+  margin: 0;
+  min-height: auto;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
 
   .app-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 0px;
-    padding: 100px 0px 0px 0px;
-    margin: 0;
-    min-height: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    padding: 160px 40px 40px 40px;
+
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
   }
+
 }
 
 </style>

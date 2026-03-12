@@ -4,8 +4,8 @@ import { ref } from "vue";
 export const useCountState = defineStore("countState", () => {
 
   const bill = ref("");
-  const tip = ref("");
-  const people = ref(0);
+  const tip = ref(0);
+  const people = ref(1);
 
   const total = ref(0);
   const tipValue = ref(0);

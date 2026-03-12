@@ -34,12 +34,13 @@
 .title-content {
   background: linear-gradient(145deg, #1d4cff, #0b30aa);
   color: #ffffff;
-  padding: 18px 60px;
+  padding: 10px;
+  text-align: center;
 }
 
 .title {
   margin: 0;
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -47,45 +48,47 @@
 .detail {
   background-color: #ffffff;
   color: #0b30aa;
-  padding: 4px 8px;
+  padding: 3px 6px;
   border-radius: 6px;
   font-weight: 600;
 }
 
 .subHeader {
   background-color: #f1f1f1;
-  padding: 14px 60px;
+  padding: 8px 12px;
+  text-align: center;
 }
 
 .subtitle {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   color: #0b30aa;
   font-weight: 500;
 }
 
-@media (max-width: 600px) {
+
+@media (min-width: 600px) {
 
   .title-content {
-    padding: 10px;
-    text-align: center;
+    padding: 18px 60px;
+    text-align: left;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 36px;
   }
 
   .detail {
-    padding: 3px 6px;
+    padding: 4px 8px;
   }
 
   .subHeader {
-    padding: 8px 12px;
-    text-align: center;
+    padding: 14px 60px;
+    text-align: left;
   }
 
   .subtitle {
-    font-size: 12px;
+    font-size: 16px;
   }
 
 }
